@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Tweets x Terror</title>
+	<meta name="description" content="Twitter Visualizations using PubNub data, D3.js, and forked from Tomomi Imura @girlie_mac">
+	<meta name="author" content="William Pei Yuan @iamwill.us">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<h1><i class="fa fa-twitter"></i> America's report on terrorism related tweets</h1>
+		<p>This map shows the emotional "state" of each state at any given moment. Positive or negative sentiments are loosely determined based on an analysis of key words used in tweets.
+		</p>
+	</header>
+
+	<section id="main">
+
+		<section id="map" class="map"></section>
+
+		<section class="tweet">
+			<blockquote class="h-entry">
+				<a class="button" role="button" title="Follow on Twitter" href="" target="_blank"><img src="images/twitter-button.png"></a>
+				<div class="header">
+					<div class="name"></div>
+					<div class="screenname"></div>
+				</div>
+
+				<div class="text"></div>
+				<div class="timestamp"></div>
+
+				<div class="actions">
+					<a class="reply" href="" target="_blank"><i class="fa fa-reply"></i></a>
+					<a class="retweet" href="" target="_blank"><i class="fa fa-retweet"></i></a>
+					<a class="favorite" href="" target="_blank"><i class="fa fa-star"></i></a>
+				</div>
+			</blockquote>
+			<div class="emotion"></div>
+		</section>
+
+		<section class="legendbox">
+			<ul>
+				<li><div class="happy"></div>More positive tweets</li>
+				<li><div class="neutral"></div>Equal numbers of positive and negative tweets</li>
+				<li><div class="sad"></div>More negative tweets</li>
+			</ul>
+		</section>
+	</section>
+
+	<input type="button" id="toggle" value="Stop me!">
+
+	<footer>
+		<p>PubNub & Twitter demo using <a href="https://twitter.com/hashtag/d3js" target="_blank">#d3js</a> The realtime data comes from <a href="https://twitter.com/pubnub" target="_blank">@PubNub</a></p>
+		<p>by: <a href="https://twitter.com/pubnub" target="_blank">@iamwill.us</a></p>
+	</footer>
+
+
+	<script src="//cdn.pubnub.com/pubnub.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+	<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+	<!-- change to your subscribe key, use minify in production -->
+	<script src="js/app.js"></script>
+
+<!-- add Google analytics -->
+
+</body>
+</html>
